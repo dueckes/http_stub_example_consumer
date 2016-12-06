@@ -6,7 +6,7 @@ RUN gem install bundler
 # Cache dependencies
 COPY ["Gemfile", "Gemfile.lock", "/tmp/cache/"]
 WORKDIR /tmp/cache
-RUN bundle install && rm -rf /tmp/cache
+RUN bundle install --without development && rm -rf /tmp/cache
 
 # Copy code
 COPY . /root/app/
