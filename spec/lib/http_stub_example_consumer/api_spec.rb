@@ -2,7 +2,10 @@ describe HttpStubExampleConsumer::API do
 
   let(:resource_api_stub) { HttpStubExampleConsumer::ResourceAPIStub.stub_server }
 
-  before(:example) { resource_api_stub.has_started! }
+  before(:example) do
+    ENV["STUB_HOST"] = resource_api_stub.host
+    resource_api_stub.has_started!
+  end
 
   after(:example) { resource_api_stub.recall_stubs! }
 
