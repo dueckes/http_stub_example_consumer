@@ -1,0 +1,13 @@
+language: ruby
+services:
+  - docker
+rvm:
+- 2.3.1
+before_install:
+  - gem install bundler
+  - git clone https://github.com/MYOB-Technology/http_stub_example.git ../http_stub_example
+cache: bundler
+notifications:
+  email:
+    on_success: change
+    on_failure: always

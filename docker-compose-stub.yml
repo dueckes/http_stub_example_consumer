@@ -1,0 +1,6 @@
+http_stub_example:
+  build: ../http_stub_example
+  ports:
+    - "5000:5000"
+  volumes:
+    - ../http_stub_example:/root/app
