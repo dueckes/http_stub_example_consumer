@@ -1,6 +1,10 @@
 %h1 Resources
 %br
-- resources.each do |resource|
-  %hr
-  %label Name
-  %span{ id: "name" }= resource.name
+%div{ id: "resources" }
+  - resources.each do |resource|
+    %hr
+    %div{ class: "resource" }
+      %label ID
+      %span= resource.id
+      %label Name
+      %a{ href: "/resource/#{resource.id}" }= resource.name
