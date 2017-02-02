@@ -115,9 +115,9 @@ begin
 
   end
 
-  task default: %w{ clobber metrics coverage consumer:lifecycle_test }
+  task default: %w{ clobber metrics coverage:show consumer:lifecycle_test ci:validate }
 
-  task pre_commit: %w{ clobber metrics coverage:show consumer:lifecycle_test ci:validate }
+  task commit: %w{ clobber metrics coverage consumer:lifecycle_test }
 
 rescue LoadError
   # Build pipeline tasks are optional - not required to start consumer

@@ -1,11 +1,11 @@
 language: ruby
 services:
   - docker
-rvm:
-  - 2.3.1
 before_install:
-  - gem install bundler
+  - gem update --system
+  - gem --version
   - git clone https://github.com/MYOB-Technology/http_stub_example.git ../http_stub_example
+script: rake commit
 cache: bundler
 notifications:
   email:
