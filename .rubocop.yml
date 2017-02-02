@@ -3,10 +3,14 @@ AllCops:
     - Rakefile
     - spec/**/*
     - vendor/**/*
-  TargetRubyVersion: 2.1
+  TargetRubyVersion: 2.4
 
 # ordered top-down by usage
 Bundler/OrderedGems:
+  Enabled: false
+
+# Ruby 3.0 concern
+Style/FrozenStringLiteralComment:
   Enabled: false
 
 # double quotes preferred, except in require
