@@ -11,7 +11,7 @@ group :development do
   gem 'rspec',                     '~> 3.5'
   gem 'faker',                     '~> 1.7'
   gem 'rack-test',                 '~> 0.6'
-  gem 'nokogiri',                  '~> 1.7'
+  gem 'nokogiri',                  '~> 1.10'
   gem 'http_stub',                 '~> 0.27'
   gem 'simplecov',                 '~> 0.13'
   gem 'codeclimate-test-reporter', '~> 1.0'
